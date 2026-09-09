@@ -7,15 +7,19 @@ Nota: reutilizar la lógica ya probada en bughunters-resta-provisional.
 from validacion import validar_numero
 
 
-def resta(a: float, b: float) -> float:
-    """Caso principal: resta a - b."""
+def _validar_operandos(a: float, b: float) -> None:
+    """Valida los dos operandos de una resta."""
     validar_numero(a)
     validar_numero(b)
+
+
+def resta(a: float, b: float) -> float:
+    """Caso principal: retorna la resta a - b."""
+    _validar_operandos(a, b)
     return a - b
 
 
 def resta_negativos(a: float, b: float) -> float:
-    """Subcaso: resta explícita con operandos negativos (función pura, sin input())."""
-    validar_numero(a)
-    validar_numero(b)
+    """Subcaso: permite realizar restas con números negativos."""
+    _validar_operandos(a, b)
     return a - b
