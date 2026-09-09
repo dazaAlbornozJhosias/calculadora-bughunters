@@ -1,3 +1,3 @@
-from .porcentaje import porcentaje, variacion_porcentual
+from .porcentaje import porcentaje, variacion_porcentual, descuento
 
-__all__ = ["porcentaje", "variacion_porcentual"]
+__all__ = ["porcentaje", "variacion_porcentual", "descuento"]
