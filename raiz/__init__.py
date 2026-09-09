@@ -1,3 +1,2 @@
-from .raiz import raiz_cuadrada, raiz_n
+from .raiz import raiz, raiz_cuadrada
 
-__all__ = ["raiz_cuadrada", "raiz_n"]
