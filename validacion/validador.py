@@ -50,3 +50,10 @@ def validar_positivo(valor):
     if valor <= 0:
         raise ValueError("El valor debe ser positivo")
     return True
+
+def validar_matriz_cuadrada(matriz):
+    """Valida que 'matriz' sea una matriz cuadrada (n x n)."""
+    validar_matriz(matriz)
+    if len(matriz) != len(matriz[0]):
+        raise ValueError("La matriz debe ser cuadrada (n x n)")
+    return True
