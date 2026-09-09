@@ -43,3 +43,10 @@ def validar_entero(valor):
     if not isinstance(valor, int):
         raise TypeError(f"Se esperaba un número entero, se recibió {type(valor).__name__}")
     return True
+
+def validar_positivo(valor):
+    """Valida que 'valor' sea un número positivo."""
+    validar_numero(valor)
+    if valor <= 0:
+        raise ValueError("El valor debe ser positivo")
+    return True
