@@ -7,8 +7,8 @@ import math
 from validacion import validar_numero
 
 
-def raiz(numero, indice=2):
-    
+def raiz_n(numero, indice=2):
+    """Subcaso: raíz n-ésima de un número (índice par + negativo -> error)."""
     validar_numero(numero)
     validar_numero(indice)
 
@@ -26,5 +26,5 @@ def raiz(numero, indice=2):
 
 
 def raiz_cuadrada(numero):
-    """Atajo para la raíz cuadrada (equivale a raiz(numero, 2))."""
-    return raiz(numero, 2)
+    """Caso principal: atajo para la raíz cuadrada (equivale a raiz_n(numero, 2))."""
+    return raiz_n(numero, 2)
