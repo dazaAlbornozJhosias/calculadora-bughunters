@@ -26,6 +26,7 @@ def validar_lista(lista):
     return True
 
 
+
 def validar_matriz(matriz):
     """Valida que 'matriz' sea una lista de listas no vacía, con filas del mismo tamaño."""
     if not isinstance(matriz, list) or len(matriz) == 0:
@@ -35,4 +36,24 @@ def validar_matriz(matriz):
         validar_lista(fila)
         if len(fila) != ancho:
             raise ValueError("Todas las filas deben tener el mismo tamaño")
+    return True
+
+def validar_entero(valor):
+    """Valida que 'valor' sea un número entero."""
+    if not isinstance(valor, int):
+        raise TypeError(f"Se esperaba un número entero, se recibió {type(valor).__name__}")
+    return True
+
+def validar_positivo(valor):
+    """Valida que 'valor' sea un número positivo."""
+    validar_numero(valor)
+    if valor <= 0:
+        raise ValueError("El valor debe ser positivo")
+    return True
+
+def validar_matriz_cuadrada(matriz):
+    """Valida que 'matriz' sea una matriz cuadrada (n x n)."""
+    validar_matriz(matriz)
+    if len(matriz) != len(matriz[0]):
+        raise ValueError("La matriz debe ser cuadrada (n x n)")
     return True
